@@ -1,8 +1,8 @@
-/* style.css – Minimales Styling */
+/* style.css – Einfaches Styling */
 body {
   margin: 0;
   font-family: sans-serif;
-  background: #f4f4f4;
+  background: #f2f2f2;
 }
 
 header {
@@ -12,8 +12,8 @@ header {
 }
 header h1 {
   margin: 0;
-  font-weight: normal;
   font-size: 1.3rem;
+  font-weight: normal;
 }
 
 main {
@@ -25,12 +25,22 @@ main {
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
+.hint {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 10px 0;
+}
+
+.buttons-bar {
+  margin-bottom: 20px;
+}
+
 button {
   background: #007acc;
   color: #fff;
   border: none;
   padding: 8px 14px;
-  margin: 6px 0;
+  margin: 4px;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -41,51 +51,28 @@ button:hover {
 .panel {
   background: #fafafa;
   border: 1px solid #eee;
-  padding: 10px;
+  padding: 15px;
   margin-bottom: 20px;
   border-radius: 4px;
 }
 
-label {
-  display: block;
-  margin-top: 10px;
-  font-weight: bold;
-}
-input[type="text"] {
-  width: 100%;
-  padding: 6px;
-  margin-top: 4px;
-  box-sizing: border-box;
-}
-select {
-  padding: 4px;
-}
-
-.hint {
-  font-size: 0.9rem;
-  color: #666;
-}
-
-#decksContainer {
-  margin-top: 10px;
-}
-.deck-block {
+#deckList .deck-block {
   border: 1px solid #ddd;
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 4px;
 }
-.deck-block h3 {
-  margin: 0 0 10px 0;
+#deckList .deck-block h3 {
+  margin: 0 0 10px;
 }
-.deck-block ul {
+#deckList .deck-block ul {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
-.deck-block li {
+#deckList .deck-block li {
   background: #eee;
-  margin-bottom: 5px;
-  padding: 6px;
+  margin-bottom: 4px;
+  padding: 4px 6px;
   border-radius: 3px;
 }
