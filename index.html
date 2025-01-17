@@ -2,55 +2,57 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <title>Flashcards mit GitHub Gist (ohne Accounts)</title>
+  <title>Flashcards (Global, Ohne Server)</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Öffentliche Flashcards (shared via Gist)</h1>
+    <h1>Flashcards App – Global, Kein Server</h1>
   </header>
 
   <main>
-    <!-- Button zum Laden & Aktualisieren -->
-    <button id="btnLoadData">Daten neu laden</button>
     <p class="hint">
-      <strong>Hinweis:</strong> Alle Änderungen sind für alle sichtbar.  
-      (Eine gemeinsame "Datenbank" in einem Gist.)
+      <strong>Achtung:</strong> Diese App speichert die Daten in einem GitHub-Gist,
+      wobei der Token öffentlich im Code steht. Jeder kann den Token sehen und alles überschreiben.
+      Nutze das nur für Demo-Testdaten oder wenn dir Sicherheit egal ist.
     </p>
 
-    <!-- Neue Decks erstellen -->
+    <!-- Steuerbuttons -->
+    <div class="buttons-bar">
+      <button id="btnLoad">Daten laden (aus Gist)</button>
+      <button id="btnSave">Daten speichern (ins Gist)</button>
+    </div>
+
+    <!-- Deck anlegen -->
     <section class="panel">
-      <h2>Neues Deck erstellen</h2>
-      <label for="deckNameInput">Deck-Name:</label>
+      <h2>Neues Deck</h2>
       <input type="text" id="deckNameInput" placeholder="z.B. Mathe, Geschichte..." />
-      <button id="btnCreateDeck">Deck anlegen</button>
+      <button id="btnAddDeck">Deck erstellen</button>
     </section>
 
-    <!-- Karten hinzufügen -->
+    <!-- Karte anlegen -->
     <section class="panel">
-      <h2>Karte hinzufügen</h2>
-      <label for="selectDeck">Deck auswählen:</label>
-      <select id="selectDeck">
+      <h2>Neue Karte</h2>
+      <label for="deckSelect">Deck auswählen:</label>
+      <select id="deckSelect">
         <option value="">-- bitte wählen --</option>
       </select>
-      <br /><br />
+      <br/><br/>
       <label for="questionInput">Frage:</label>
-      <input type="text" id="questionInput" placeholder="z.B. Wer entdeckte Amerika?" />
+      <input type="text" id="questionInput" placeholder="Frage..." />
       <label for="answerInput">Antwort:</label>
-      <input type="text" id="answerInput" placeholder="z.B. Christoph Kolumbus, 1492" />
-      <br />
-      <button id="btnAddCard">Karte in Deck speichern</button>
+      <input type="text" id="answerInput" placeholder="Antwort..." />
+      <br/>
+      <button id="btnAddCard">Karte hinzufügen</button>
     </section>
 
-    <!-- Anzeige aller Decks & Karten -->
+    <!-- Anzeige aller Decks -->
     <section class="panel">
       <h2>Alle Decks & Karten</h2>
-      <div id="decksContainer"></div>
+      <div id="deckList"></div>
     </section>
   </main>
 
-  <!-- JS-Skripte -->
-  <script src="gist.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
